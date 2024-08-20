@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./Assets/icono.png" type="image/x-icon">
+    <title>Jardines Eternos</title>
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <img src="./Assets/icono.png" alt="Logo de la pagina">
+            <h1>Jardines Eternos</h1>
+        </div>
+        <nav class="menupapa">
+            <ul class="menu">
+                <li><a href="./pages/terrarios.html">Terrarios</a></li>
+                <li><a href="./pages/kokedamas.html">Kokedamas</a></li>
+                <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                <li><a href="#">Inicio</a></li>
+            </ul>
+        </nav>
+        <div class="carrito">
+            <a href="./pages/iniciosesion.html"><img class="inicio-sesion-logo" src="./Assets/iniciosesion.png" alt="login"></a>
+            <a href="./pages/carrito.html"><img src="./Assets/carrito.png" alt="carrito de compras"></a>
+        </div>
+    </header>
+    <main>
+        <section class="muestra-inicio">
+            <img src="./Assets/imagen-inicio.png" alt="Imagen de Muestra">
+            <h2>Jardines Eternos</h2>
+            <p>Descubre la belleza en cada rincón con nuestras kokedamas y Terrarios.</p>
+        </section>
+        <section class="muestras">
+            <h2>¡Descubre tus plantas de Temporada!</h2>
+            <img src="./Assets/invierno.png" alt="copo invierno">
+            <img src="./Assets/primavera.png" alt="flor primavera">
+            <img src="./Assets/verano.png" alt="sol verano">
+            <img src="./Assets/otoño.png" alt="hoja otoño">
+        </section>
+        <section>
+            <div class="main-container">
+                <h2 class="nuestros-prod">Alguno de nuestros Productos</h2>
+                <div class="container">
+                    <div class="product-card">
+                        <img class="product-image" src="../Assets/1.jpg" alt="Terrario Desértico">
+                        <h2 class="product-name">Terrario Desértico</h2>
+                        <p class="product-price">$15000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('Terrario Desértico', 15000)">Agregar al carrito</button>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-image" src="../Assets/k1.jpg" alt="Kokedama de Syngonium">
+                        <h2 class="product-name">Kokedama de Syngonium</h2>
+                        <p class="product-price">$12000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('Kokedama de Syngonium', 12000)">Agregar al carrito</button>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-image" src="../Assets/3.jfif" alt="Terrario Pantanoso">
+                        <h2 class="product-name">Terrario Pantanoso</h2>
+                        <p class="product-price">$22000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('Terrario Pantanoso', 22000)">Agregar al carrito</button>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-image" src="../Assets/k4.jfif" alt="Kokedama de Ficus">
+                        <h2 class="product-name">Kokedama de Ficus</h2>
+                        <p class="product-price">$20000</p>
+                        <button class="add-to-cart-btn" onclick="addToCart('Kokedama de Ficus', 20000)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="boton-ver-mas">
+            <button onclick="window.location.href='http://127.0.0.1:5500/pages/terrarios.html'">Ver Terrarios</button>
+            <button onclick="window.location.href='http://127.0.0.1:5500/pages/kokedamas.html'">Ver Kokedamas</button>
+        </div>
+        <section class="fin-muestras">
+            <img src="./Assets/muestra5.jpg" alt="Ultima imagen del index">
+            <p>Gracias por visitarnos y por permitirnos ser parte de tu viaje hacia un espacio más verde y saludable. Esperamos que disfrutes de tu experiencia de compra con nosotros y que encuentres exactamente lo que estás buscando.</p>
+        </section>
+
+        <a href="https://wa.me/2617039848" target="_blank" class="whatsapp-icon">
+            <img src="../Assets/wsp-icon.png" alt="WhatsApp">
+        </a>
+    </main>
+    <footer>
+        <div class="pie-pagina-1">
+            <h2>Navegación</h2>
+            <nav class="pie-pagina-nav">
+                <ul>
+                  <li><a href="#">Inicio</a></li>
+                  <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                  <li><a href="./pages/terrarios.html">Terrarios</a></li>
+                  <li><a href="./pages/kokedamas.html">Kokedamas</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="pie-pagina-2">
+            <h2 class="pie-pagina-T">Contacto</h2>
+            <a href="#"><img src="./Assets/ig.png" alt="Instagram"></a>
+            <a href="#"><img src="./Assets/tiktok.png" alt="Tik Tok"></a>
+            <a href="mailto:jo608411@gmail.com"><img src="./Assets/mail.png" alt="Mail"></a>
+        </div>
+        <a class="byc" href="#">Bases y Condiciones</a>
+    </footer>
+</body>
+</html>

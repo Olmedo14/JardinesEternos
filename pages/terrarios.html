@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JavaScript/terrarios.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../Assets/icono.png" type="image/x-icon">
+    <title>Jardines Eternos - Terrarios</title>
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <img src="../Assets/icono.png" alt="Logo de la pagina">
+            <h1>Jardines Eternos</h1>
+        </div>
+        <nav class="menupapa">
+            <ul class="menu">
+                <li><a href="#">Terrarios</a></li>
+                <li><a href="../pages/kokedamas.html">Kokedamas</a></li>
+                <li><a href="../pages/nosotros.html">Nosotros</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+            </ul>
+        </nav>
+        <div class="carrito">
+            <a href="../pages/carrito.html"><img src="../Assets/carrito.png" alt="carrito de compras"></a>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="container">
+                <div class="product-card">
+                    <img class="product-image" src="../Assets/1.jpg" alt="Terrario Desértico">
+                    <h2 class="product-name">Terrario Desértico</h2>
+                    <p class="product-price">$15000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Terrario Desértico', 15000)">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img class="product-image" src="../Assets/2.jfif" alt="Terrario Boscoso">
+                    <h2 class="product-name">Terrario Boscoso</h2>
+                    <p class="product-price">$20000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Terrario Boscoso', 20000)">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img class="product-image" src="../Assets/3.jfif" alt="Terrario Pantanoso">
+                    <h2 class="product-name">Terrario Pantanoso</h2>
+                    <p class="product-price">$22000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Terrario Pantanoso', 22000)">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img class="product-image" src="../Assets/4.webp" alt="Terrario Montañoso">
+                    <h2 class="product-name">Terrario Montañoso</h2>
+                    <p class="product-price">$30000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Terrario Montañoso', 30000)">Agregar al carrito</button>
+                </div>
+            </div>
+    
+            <div class="cart">
+                <h2>Carrito de Compras</h2>
+                <ul id="cartItems"></ul>
+                <p>Total: $<span id="cartTotal">0.00</span></p>
+            </div>
+        </div>
+
+        <a href="https://wa.me/2617039848" target="_blank" class="whatsapp-icon">
+            <img src="../Assets/wsp-icon.png" alt="WhatsApp">
+        </a>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JavaScript/kokedamas.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../Assets/icono.png" type="image/x-icon">
+    <title>Jardines Eternos - Kokedamas</title>
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <img src="../Assets/icono.png" alt="Logo de la pagina">
+            <h1>Jardines Eternos</h1>
+        </div>
+        <nav class="menupapa">
+            <ul class="menu">
+                <li><a href="../pages/terrarios.html">Terrarios</a></li>
+                <li><a href="#">Kokedamas</a></li>
+                <li><a href="../pages/nosotros.html">Nosotros</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+            </ul>
+        </nav>
+        <div class="carrito">
+            <a href="../pages/carrito.html"><img src="../Assets/carrito.png" alt="carrito de compras"></a>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="container">
+                <div class="product-card">
+                    <img class="product-image" src="../Assets/k1.jpg" alt="Kokedama de Syngonium">
+                    <h2 class="product-name">Kokedama de Syngonium</h2>
+                    <p class="product-price">$12000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Kokedama de Syngonium', 12000)">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img class="product-image" src="../Assets/k3.jfif" alt="Kokedama de Helechos">
+                    <h2 class="product-name">Kokedama de Helechos</h2>
+                    <p class="product-price">$16000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Kokedama de Helechos', 16000)">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img class="product-image" src="../Assets/k2.jfif" alt="Kokedama de Bonsai">
+                    <h2 class="product-name">Kokedama de Bonsai</h2>
+                    <p class="product-price">$18000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Kokedama de Bonsai', 18000)">Agregar al carrito</button>
+                </div>
+                <div class="product-card">
+                    <img class="product-image" src="../Assets/k4.jfif" alt="Kokedama de Ficus">
+                    <h2 class="product-name">Kokedama de Ficus</h2>
+                    <p class="product-price">$20000</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Kokedama de Ficus', 20000)">Agregar al carrito</button>
+                </div>
+            </div>
+    
+            <div class="cart">
+                <h2>Carrito de Compras</h2>
+                <ul id="cartItems"></ul>
+                <p>Total: $<span id="cartTotal">0.00</span></p>
+            </div>
+        </div>
+        
+        <a href="https://wa.me/2617039848" target="_blank" class="whatsapp-icon">
+            <img src="../Assets/wsp-icon.png" alt="WhatsApp">
+        </a>
+    </main>
+    
+</body>
+</html>
