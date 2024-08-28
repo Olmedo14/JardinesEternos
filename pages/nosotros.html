@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../Assets/icono.png" type="image/x-icon">
     <title>Jardines Eternos</title>
@@ -15,27 +16,84 @@
         </div>
         <nav class="menupapa">
             <ul class="menu">
-                <li><a href="../pages/terrarios.html">Terrarios</a></li>
-                <li><a href="../pages/kokedamas.html">Kokedamas</a></li>
-                <li><a href="../pages/nosotros.html">Nosotros</a></li>
                 <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./kokedamas.html">Kokedamas</a></li>
+                <li><a href="./terrarios.html">Terrarios</a></li>
+                <li><a href="./extras.html">Extras</a></li>
+                <li><a href="#">Nosotros</a></li>
             </ul>
         </nav>
         <div class="carrito">
-            <a href="../pages/iniciosesion.html"><img src="../Assets/iniciosesion.png" alt="login"></a>
+            <a href="../pages/iniciosesion.html"><img class="inicio-sesion-logo" src="../Assets/iniciosesion.png" alt="login"></a>
             <a href="../pages/carrito.html"><img src="../Assets/carrito.png" alt="carrito de compras"></a>
         </div>
     </header>
     <main>
+        <section class="seccion-quienes-somos">
+            <h2 class="titulo-seccion">¿QUIÉNES SOMOS?</h2>
+            <p class="subtitulo">Expertos en la creación de terrarios y kokedamas artesanales, hechos con amor y dedicación.</p>
+            <div class="contenido-seccion">
+                <div class="texto-seccion">
+                    <p>
+                        En nuestra tienda, nos especializamos en ofrecer terrarios y kokedamas únicos, creados con los mejores materiales y una atención especial a cada detalle. 
+                        Nuestro objetivo es llevar un pedazo de naturaleza a tu hogar, oficina o cualquier espacio que desees embellecer.
+                    </p>
+                    <p>
+                        Con años de experiencia en el cuidado y diseño de plantas, estamos comprometidos a brindar productos de calidad y servicio excepcional. 
+                        Cada pieza que creamos es una obra de arte viva, diseñada para traer serenidad y vida verde a cualquier ambiente.
+                    </p>
+                </div>
+                <div class="imagen-seccion">
+                    <img src="../Assets/imagen-about.jpg" alt="Terrarios y Kokedamas">
+                </div>
+            </div>
+        </section>
+    
+        <section class="seccion-destacados">
+            <h3 class="titulo-destacados">¿Por qué elegir nuestros productos?</h3>
+            <div class="contenedor-destacados">
+                <div class="destacado1">
+                    <img src="../Assets/icono-calidad.png" alt="Calidad">
+                    <h4>Calidad</h4>
+                    <p>Materiales de primera calidad y plantas cuidadosamente seleccionadas.</p>
+                </div>
+                <div class="destacado2">
+                    <img src="../Assets/icono-stars.png" alt="Experiencia">
+                    <h4>Experiencia</h4>
+                    <p>Años de experiencia en el diseño y mantenimiento de terrarios y kokedamas.</p>
+                </div>
+                <div class="destacado3">
+                    <img src="../Assets/icono-personalizacion.png" alt="Personalización">
+                    <h4>Personalización</h4>
+                    <p>Cada terrario y kokedama es diseñado a medida según tus preferencias.</p>
+                </div>
+            </div>
+        </section>
 
+        <div>
+            <a href="https://wa.me/2617039848" target="_blank" class="whatsapp-icon">
+                <img src="../Assets/wsp-icon.png" alt="WhatsApp">
+            </a>
+        </div>
     </main>
     <footer>
-        <h2 class="pie-pagina-T">Contacto</h2>
-            <div class="pie-pagina">
-                <a href="#"><img src="../Assets/ig.png" alt="Instagram"></a>
-                <a href="#"><img src="../Assets/tiktok.png" alt="Tik Tok"></a>
-                <a href="mailto:jo608411@gmail.com"><img src="../Assets/mail.png" alt="Mail"></a>
-            </div>
+        <div class="pie-pagina-1">
+            <h2>Navegación</h2>
+            <nav class="pie-pagina-nav">
+                <ul>
+                  <li><a href="../index.html">Inicio</a></li>
+                  <li><a href="#">Nosotros</a></li>
+                  <li><a href="../pages/terrarios.html">Terrarios</a></li>
+                  <li><a href="../pages/kokedamas.html">Kokedamas</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="pie-pagina-2">
+            <h2 class="pie-pagina-T">Contacto</h2>
+            <a href="#"><img src="../Assets/ig.png" alt="Instagram"></a>
+            <a href="#"><img src="../Assets/tiktok.png" alt="Tik Tok"></a>
+            <a href="mailto:jo608411@gmail.com"><img src="../Assets/mail.png" alt="Mail"></a>
+        </div>
         <a class="byc" href="#">Bases y Condiciones</a>
     </footer>
 </body>
