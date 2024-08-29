@@ -1,3 +1,8 @@
+/*-------*/
+/*FUENTES*/
+/*-------*/
+
+
 @font-face {
     font-family: "MontSerrat";
     src: url("../Assets/Montserrat/Montserrat-VariableFont_wght.ttf");
@@ -12,7 +17,13 @@
     font-family: "Satisfy";
     src: url(../Assets/Satisfy/Satisfy-Regular.ttf);
 }
+
+
+/*-------*/
 /*FONDO*/
+/*-------*/
+
+
 header{
     background: linear-gradient(to bottom, #82ccd5, #ffffff);
     outline: 2px solid #000000;
@@ -30,7 +41,13 @@ body{
 footer{
     background: linear-gradient(to top, #82ccd5, #ffffff);
 }
+
+
+/*-------*/
 /*ENCABEZADO*/
+/*-------*/
+
+
 .encabezado{
     position: absolute;
     display: flex;
@@ -51,7 +68,13 @@ footer{
     height: 70px;
     padding: 6px;
 }
+
+
+/*-------*/
 /*CARRITO*/
+/*-------*/
+
+
 .carrito{
     display: flex;
     flex-direction: row;
@@ -63,14 +86,20 @@ footer{
     padding: 12px 20px 12px 12px;
 }
 .carrito img:hover{
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
     transition: transform 0.4s;
 }
 .carrito .inicio-sesion-logo{
     height: 68px;
     padding: 12px 5px 12px 12px;
 }
+
+
+/*-------*/
 /*MENU DE NAVEGACIÓN*/
+/*-------*/
+
+
 .menupapa{
     display: flex;
     justify-content: center;
@@ -92,10 +121,16 @@ footer{
     font-weight: 400;
 }
 .menu li:hover{
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
     transition: transform 0.4s;
 }
-/*PRIMERA SECCION DE LA PAGINA*/
+
+
+/*-------*/
+/*PRIMER VISTA DE LA PAGINA*/
+/*-------*/
+
+
 .muestra-inicio{
     display: flex;
     justify-content: start;
@@ -132,7 +167,13 @@ footer{
     top: 407px;
     letter-spacing: -1px;
 }
-/*IMAGENES DE MUESTRA SUELTAS*/
+
+
+/*-------*/
+/*DESCUBRE TUS PLANTAS DE TEMPORADA*/
+/*-------*/
+
+
 .muestras{
     display: flex;
     margin-bottom: 100px;
@@ -152,6 +193,12 @@ footer{
     height: 145px;
     margin-left: 0px;
 }
+
+
+/*-------*/
+/*BOTONES DE VER MAS TERRARIOS Y KOKEDAMAS*/
+/*-------*/
+
 
 .boton-ver-mas{
     display: flex;
@@ -180,9 +227,16 @@ footer{
 
 }
 .boton-ver-mas button:hover{
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
     transition: transform 0.3s;
 }
+
+
+/*-------*/
+/*SECCION DE "ALGUNO DE NUESTROS PRODUCTOS*/
+/*-------*/
+
+
 .main-container{
     display: flex;
     flex-direction: column;
@@ -224,7 +278,7 @@ footer{
     margin-bottom: 50px;
 }
 .product-card:hover{
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
     transition: transform 0.3s;
 }
 
@@ -263,6 +317,12 @@ footer{
     background-color: #218838;
 }
 
+
+/*-------*/
+/*SECCION CARRITO DE COMPRAS*/
+/*-------*/
+
+
 .cart{
     background-color: #fff;
     border: 1px solid #ddd;
@@ -286,6 +346,12 @@ footer{
     margin: 5px 0;
 }
 
+
+/*-------*/
+/*ICONO DE WSP ABAJO A LA DERECHA*/
+/*-------*/
+
+
 .whatsapp-icon{
     position: fixed;
     bottom: 20px;
@@ -301,9 +367,15 @@ footer{
 }
 
 .whatsapp-icon:hover img{
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
     transition: transform 0.3s;
 }
+
+
+/*-------*/
+/*FOOTER*/
+/*-------*/
+
 
 .pie-pagina-2{
     display: flex;
@@ -324,7 +396,7 @@ footer{
     height: 40px;
 }
 .pie-pagina-2 img:hover{
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
     transition: transform 0.4s;
 }
 
@@ -337,9 +409,9 @@ footer{
 }
 
 .byc {
-    display: inline-block;  /* Asegura que el enlace se trate como un bloque en línea */
-    text-align: center;     /* Centra el texto si se trata de un contenedor más grande */
-    text-decoration: none;  /* Elimina la línea debajo del enlace */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     color: #000; 
     padding: 10px 0;
     font-family: "Montserrat", sans-serif;
@@ -350,8 +422,8 @@ footer{
 }
   
 .byc:hover {
-    text-decoration: underline;  /* Añade la subrayado solo al pasar el cursor */
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    text-decoration: underline;
+    transform: scale(1.1);
     transition: transform 0.4s;
 }
 
@@ -378,7 +450,7 @@ footer{
     font-family: "Montserrat", sans-serif;
 }
 .pie-pagina-1 li:hover{
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
     transition: transform 0.4s;
 }
 
@@ -387,6 +459,11 @@ footer{
     text-decoration: none;
     font-size: 13px;
 }
+
+
+/*-------*/
+/*APARTADO DE REGISTRO*/
+/*-------*/
 
 
 .container-regis {
@@ -447,7 +524,7 @@ footer{
     font-weight: 400;
 }
 .boton-regis:hover{
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
     transition: transform 0.4s;
 }
   
@@ -480,6 +557,12 @@ footer{
     font-weight: 500;
     font-style: normal;
 }
+
+
+/*-------*/
+/*SECCION DE BENEFICIOS (INICIO)*/
+/*-------*/
+
 
 .seccion-beneficios{
     display: flex;
@@ -528,6 +611,11 @@ footer{
 }
 
 
+/*-------*/
+/*SECCION "TE APASIONA LA NATURALEZA"*/
+/*-------*/
+
+
 .pasion-nat h2{
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -547,7 +635,12 @@ footer{
     margin-top: 4px;
 }
 
-/* Estilo para el icono del corazón */
+
+/*-------*/
+/*MODAL DE DESCUENTOS POR MAIL*/
+/*-------*/
+
+
 .mt-3{
     width: 200px;
     height: 200px;
@@ -557,6 +650,12 @@ footer{
 .img-fluid{
     border-radius: 5px;
 }
+
+
+/*-------*/
+/*APARTADO DE ABOUT US*/
+/*-------*/
+
 
 .nosotros-index-main2{
     display: flex;
@@ -611,7 +710,7 @@ footer{
     margin: 5px;
 }
 .nosotros-index button:hover{
-    transform: scale(1.1); /* Efecto de zoom al pasar el cursor */
+    transform: scale(1.1);
     transition: transform 0.4s;
     transform: translateX(10px);
 }
@@ -663,6 +762,12 @@ footer{
     border-radius: 8px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+
+/*-------*/
+/*SECCION "POR QUÉ ELEGIR NUESTROS PRODUCTOS"*/
+/*-------*/
+
 
 .seccion-destacados{
     padding: 50px 20px;
@@ -779,6 +884,10 @@ footer{
 }
 
 
+/*-------*/
+/*APARTADO DE FAQ*/
+/*-------*/
+
 
 .acordeon-main{
     display: flex;
@@ -800,9 +909,9 @@ footer{
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    text-align: left; /* Alinea el texto a la izquierda */
-    border: none; /* Elimina el borde para evitar el efecto de "desbordamiento" */
-    box-shadow: none; /* Elimina las sombras que podrían causar desbordes */
+    text-align: left;
+    border: none;
+    box-shadow: none;
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -814,8 +923,8 @@ footer{
 }
 
 .boton-acordeon:focus {
-    box-shadow: none; /* Evita que aparezca un borde al hacer clic en el botón */
-    outline: none; /* Elimina el borde que aparece al hacer clic en el botón */
+    box-shadow: none;
+    outline: none;
 }
 
 .item-acordeon {
