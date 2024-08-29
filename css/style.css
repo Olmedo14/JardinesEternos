@@ -918,28 +918,46 @@ footer{
 }
 
 
-
+/*-------*/
+/*MENU DE NAVEGACION BOOTSTRAP*/
+/*-------*/
 
 
 .navbar-brand {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
 .navbar-brand img {
     max-height: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
     margin-right: -10px;
     margin-left: -30px;
-  }
+}
 
-  .navbar-brand h1{
+.navbar-brand h1{
     font-size: 40px;
-  }
+}
 
+.bg-light{
+    background: linear-gradient(to bottom, #82ccd5, #ffffff);
+    outline: 2px solid #000000;
+    border-radius: 5px;
+}
 
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+    font-size: 19px;
+}
 
-  
+.navbar-light .navbar-nav .nav-link:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition: transform 0.4s;
+}
+.navbar-light .navbar-nav .nav-link:focus{
+    color: black;
+}
 
 /*-------*/
 /*RESOLUCION RESPONSIVE "NOSOTROS"*/
@@ -987,5 +1005,66 @@ footer{
         width: 64px;
         margin-right: -18px;
         margin-top: 5px;
+    }
+    .muestra-inicio h2{
+        text-align: center;
+        font-size: 100px;
+        left: 0px;
+    }
+    .muestra-inicio p{
+        text-align: center;
+        font-size: 17px;
+        left: 0px;
+        top: 481px;
+        width: 100%;
+    }
+    .muestra-inicio img{
+        opacity: 0.65;
+    }
+    .muestras{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .muestras h2{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .container{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .nuestros-prod h2{
+        text-align: center;
+        padding: 16px;
+        width: 88%;
+    }
+    .nosotros-index-main2{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nosotros-index{
+        flex-wrap: wrap;
+    }
+    .nosotros-index img{
+        height: 215px;
+    }
+    .nosotros-index p{
+        font-size: 16px;
+        text-align: left;
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .nosotros-index button{
+        right: 140px;
+    }
+    .pasion-nat h3{
+        margin-top: 20px;
+    }
+    .seccion-beneficios{
+        margin-top: 0px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }
