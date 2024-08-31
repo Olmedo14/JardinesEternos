@@ -1,9 +1,9 @@
 // Definición de variables globales para los productos y sus precios
 let productos = [
-    { nombre: "Kokedama de Syngonium", precio: 12000 },
-    { nombre: "Kokedama de Helechos", precio: 16000 },
-    { nombre: "Kokedama de Bonsai", precio: 18000 },
-    { nombre: "Kokedama de Ficus", precio: 20000 }
+    { nombre: "Base De Vidrio Para Terrarios", precio: 11000 },
+    { nombre: "Guantes de Jardineria", precio: 7000 },
+    { nombre: "Fertilizante 100% Casero", precio: 6000 },
+    { nombre: "Tierra Organica para Kokedamas", precio: 17000 }
 ];
 
 let carrito = [];
