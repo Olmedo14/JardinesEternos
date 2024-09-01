@@ -10,7 +10,6 @@ $(document).ready(function(){
         if (email) {
             alert('Gracias por suscribirte con el correo: ' + email);
             $('#suscripcionModal').modal('hide');
-            // Aquí podrías agregar lógica para enviar el correo al servidor
         } else {
             alert('Por favor, ingresa un correo electrónico válido.');
         }

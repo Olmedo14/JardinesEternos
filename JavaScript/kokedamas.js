@@ -1,4 +1,4 @@
-// Definición de variables globales para los productos y sus precios
+// Variables globales para los productos y sus precios
 let productos = [
     { nombre: "Kokedama de Syngonium", precio: 12000 },
     { nombre: "Kokedama de Helechos", precio: 16000 },

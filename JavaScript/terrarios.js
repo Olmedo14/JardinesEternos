@@ -1,4 +1,4 @@
-// Definición de variables globales para los productos y sus precios
+// Variables globales para los productos y sus precios
 let productos = [
     { nombre: "Terrario Desértico", precio: 15000 },
     { nombre: "Terrario Boscoso", precio: 20000 },
