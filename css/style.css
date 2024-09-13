@@ -315,6 +315,18 @@ footer{
     margin: 5px 0;
 }
 
+.cart button{
+    font-family: 'MontSerrat';
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 7px;
+    background-color: #82ccd5;
+    color: black;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 
 /*-------*/
 /*ICONO DE WSP ABAJO A LA DERECHA*/

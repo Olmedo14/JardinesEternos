@@ -6,23 +6,23 @@ let productos = [
     { nombre: "Kokedama de Ficus", precio: 20000 }
 ];
 
-let carrito = [];
-let total = 0.00;
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];  // Recuperar carrito del storage o inicializar vacío
+let total = parseFloat(localStorage.getItem('total')) || 0.00;    // Recuperar total del storage o inicializar en 0.00
 
 // Función para agregar productos al carrito
 function addToCart(nombre, precio) {
-    // Verificar si el producto ya está en el carrito
     let productoEnCarrito = carrito.find(item => item.nombre === nombre);
     
     if (productoEnCarrito) {
-        productoEnCarrito.cantidad += 1;  // Incrementa la cantidad
-        productoEnCarrito.precioTotal += precio;  // Actualiza el precio total
+        productoEnCarrito.cantidad += 1;
+        productoEnCarrito.precioTotal += precio;
     } else {
         carrito.push({ nombre: nombre, precio: precio, cantidad: 1, precioTotal: precio });
     }
     
-    calcularTotal();  // Calcular el total después de agregar al carrito
-    actualizarCarrito();  // Actualiza el DOM
+    calcularTotal();
+    actualizarCarrito();
+    guardarCarrito();  // Guardar en localStorage después de cada cambio
 }
 
 // Función para calcular el total
@@ -45,17 +45,32 @@ function actualizarCarrito() {
     cartTotalElement.textContent = Math.round(total);
 }
 
-// Función para finalizar la compra
+// Función para guardar carrito y total en localStorage
+function guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(carrito));  // Guardar carrito en JSON
+    localStorage.setItem('total', total.toString());           // Guardar total
+}
+
+// Función para finalizar la compra y mostrar mensaje en el DOM
 function finalizarCompra() {
+    const mensajeElement = document.getElementById('mensajeCompra');  // Elemento para mostrar el mensaje
+
     if (carrito.length > 0) {
-        alert(`Has comprado los siguientes productos:\n${carrito.map(item => item.producto).join("\n")}\n\nTotal a pagar: $${Math.round(total)}`);
+        mensajeElement.innerHTML = `<p>Has comprado los siguientes productos:</p><ul>${carrito.map(item => `<li>${item.nombre} x ${item.cantidad} - $${item.precioTotal}</li>`).join('')}</ul><p><strong>Total a pagar: $${Math.round(total)}</strong></p>`;
         console.log("Compra finalizada. Total: $" + Math.round(total));
-        // Reiniciar carrito
+        
+        // Reiniciar carrito y total
         carrito = [];
         total = 0.00;
         actualizarCarrito();
+        guardarCarrito();  // Vaciar el storage después de la compra
     } else {
-        alert("No has agregado ningún producto al carrito.");
+        mensajeElement.innerHTML = `<p>No has agregado ningún producto al carrito.</p>`;
         console.log("No se realizó ninguna compra.");
     }
 }
+
+// Cargar el carrito almacenado cuando se carga la página
+window.onload = function() {
+    actualizarCarrito();  // Actualizar el DOM con los datos del storage
+};
