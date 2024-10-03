@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "Terrario Desértico",
+        "precio": 15000,
+        "imagen": "../Assets/1.jpg"
+    },
+    {
+        "nombre": "Terrario Boscoso",
+        "precio": 20000,
+        "imagen": "../Assets/2.jfif"
+    },
+    {
+        "nombre": "Terrario Pantanoso",
+        "precio": 22000,
+        "imagen": "../Assets/3.jfif"
+    },
+    {
+        "nombre": "Terrario Montañoso",
+        "precio": 30000,
+        "imagen": "../Assets/4.webp"
+    }
+]

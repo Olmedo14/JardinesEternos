@@ -1,15 +1,27 @@
-// Variables globales para los productos y sus precios
-let productos = [
-    { nombre: "Terrario Desértico", precio: 15000 },
-    { nombre: "Terrario Boscoso", precio: 20000 },
-    { nombre: "Terrario Pantanoso", precio: 22000 },
-    { nombre: "Terrario Montañoso", precio: 30000 }
-];
+let productos = [];
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+let total = parseFloat(localStorage.getItem('total')) || 0.00;
 
-let carrito = JSON.parse(localStorage.getItem('carrito')) || [];  // Recuperar carrito del storage o inicializar vacío
-let total = parseFloat(localStorage.getItem('total')) || 0.00;    // Recuperar total del storage o inicializar en 0.00
+function mostrarProductos() {
+    const container = document.querySelector('.container');
+    container.innerHTML = '';
 
-// Función para agregar productos al carrito
+    productos.forEach(producto => {
+        let div = document.createElement('div');
+        div.classList.add('product-card');
+        div.setAttribute('data-aos', 'fade-up');
+        div.innerHTML = `
+            <img class="product-image" src="${producto.imagen}" alt="${producto.nombre}">
+            <h2 class="product-name">${producto.nombre}</h2>
+            <p class="product-price">$${producto.precio}</p>
+            <button class="add-to-cart-btn" onclick="addToCart('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
+        `;
+        container.appendChild(div);
+    });
+
+    AOS.init(); // Inicializar animaciones AOS
+}
+
 function addToCart(nombre, precio) {
     let productoEnCarrito = carrito.find(item => item.nombre === nombre);
     
@@ -22,20 +34,18 @@ function addToCart(nombre, precio) {
     
     calcularTotal();
     actualizarCarrito();
-    guardarCarrito();  // Guardar en localStorage después de cada cambio
+    guardarCarrito();
 }
 
-// Función para calcular el total
 function calcularTotal() {
     total = carrito.map(item => item.precioTotal).reduce((acc, precio) => acc + precio, 0);
 }
 
-// Función para actualizar el DOM con el carrito
 function actualizarCarrito() {
     const cartItemsElement = document.getElementById("cartItems");
     const cartTotalElement = document.getElementById("cartTotal");
     
-    cartItemsElement.innerHTML = "";  // Limpiar lista del carrito
+    cartItemsElement.innerHTML = "";
     carrito.forEach(item => {
         let li = document.createElement("li");
         li.textContent = `${item.nombre} x ${item.cantidad} - $${item.precioTotal}`;
@@ -45,32 +55,48 @@ function actualizarCarrito() {
     cartTotalElement.textContent = Math.round(total);
 }
 
-// Función para guardar carrito y total en localStorage
 function guardarCarrito() {
-    localStorage.setItem('carrito', JSON.stringify(carrito));  // Guardar carrito en JSON
-    localStorage.setItem('total', total.toString());           // Guardar total
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('total', total.toString());
 }
 
-// Función para finalizar la compra y mostrar mensaje en el DOM
 function finalizarCompra() {
-    const mensajeElement = document.getElementById('mensajeCompra');  // Elemento para mostrar el mensaje
+    if (carrito.length === 0) {
+        Swal.fire({
+            title: 'Carrito vacío',
+            text: 'No has agregado ningún producto al carrito.',
+            icon: 'warning',
+            confirmButtonText: 'Aceptar'
+        });
+        return;
+    }
 
-    if (carrito.length > 0) {
-        mensajeElement.innerHTML = `<p>Has comprado los siguientes productos:</p><ul>${carrito.map(item => `<li>${item.nombre} x ${item.cantidad} - $${item.precioTotal}</li>`).join('')}</ul><p><strong>Total a pagar: $${Math.round(total)}</strong></p>`;
-        console.log("Compra finalizada. Total: $" + Math.round(total));
-        
-        // Reiniciar carrito y total
+    Swal.fire({
+        title: 'Compra finalizada',
+        html: `<p>Has comprado los siguientes productos:</p><ul>${carrito.map(item => `<li>${item.nombre} x ${item.cantidad} - $${item.precioTotal}</li>`).join('')}</ul><p><strong>Total a pagar: $${Math.round(total)}</strong></p>`,
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    }).then(() => {
         carrito = [];
         total = 0.00;
         actualizarCarrito();
-        guardarCarrito();  // Vaciar el storage después de la compra
-    } else {
-        mensajeElement.innerHTML = `<p>No has agregado ningún producto al carrito.</p>`;
-        console.log("No se realizó ninguna compra.");
-    }
+        guardarCarrito();
+    });
 }
 
-// Cargar el carrito almacenado cuando se carga la página
+function cargarProductos() {
+    fetch('../JavaScript/terrarios.json')
+        .then(response => response.json())
+        .then(data => {
+            productos = data;
+            mostrarProductos();
+        })
+        .catch(error => {
+            console.error('Error al cargar los productos:', error);
+        });
+}
+
 window.onload = function() {
-    actualizarCarrito();  // Actualizar el DOM con los datos del storage
+    actualizarCarrito();
+    cargarProductos();
 };

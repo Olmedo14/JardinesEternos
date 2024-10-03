@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "Base De Vidrio Para Terrarios",
+        "precio": 11000,
+        "imagen": "../Assets/base-vidrio.jpg"
+    },
+    {
+        "nombre": "Guantes de Jardineria",
+        "precio": 7000,
+        "imagen": "../Assets/guantes.jpg"
+    },
+    {
+        "nombre": "Fertilizante 100% Casero",
+        "precio": 6000,
+        "imagen": "../Assets/spray.jpg"
+    },
+    {
+        "nombre": "Tierra Organica para Kokedamas",
+        "precio": 17000,
+        "imagen": "../Assets/tierra-preparada.jpg"
+    }
+]

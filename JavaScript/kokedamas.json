@@ -1,0 +1,22 @@
+[
+    {
+        "nombre": "Kokedama de Syngonium",
+        "precio": 12000,
+        "imagen": "../Assets/k1.jpg"
+    },
+    {
+        "nombre": "Kokedama de Helechos",
+        "precio": 16000,
+        "imagen": "../Assets/k3.jfif"
+    },
+    {
+        "nombre": "Kokedama de Bonsai",
+        "precio": 18000,
+        "imagen": "../Assets/k2.jfif"
+    },
+    {
+        "nombre": "Kokedama de Ficus",
+        "precio": 20000,
+        "imagen": "../Assets/k4.jfif"
+    }
+]

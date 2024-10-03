@@ -41,6 +41,9 @@ body{
 footer{
     background: linear-gradient(to top, #82ccd5, #ffffff);
 }
+html{
+    overflow-x: hidden;
+}
 
 
 /*-------*/
